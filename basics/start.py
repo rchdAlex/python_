@@ -1,6 +1,6 @@
 from functools import total_ordering
 
-print('Hello, World') ## the most famous code line
+print('Hello, World')  ## the most famous code line
 
 ## Create variable
 print("#Create variable")
@@ -10,7 +10,7 @@ x = 10
 X = 11
 print(greeting + "Mario")
 print(happy_thought + "Luigi")
-print(x) ## is different from X
+print(x)  ## is different from X
 print(X)
 
 ##Constants
@@ -20,31 +20,30 @@ API_KEY = "kgibsfdhgvnozsbdgvnzsmdgjven"
 
 ##Data Types
 print("#Data Types")
-text = "text" #string
+text = "text"  # string
 number = 100  # integer
-number_second = -100 #integer too
-decimal = 0.5 #flaot
-complexe = 8j #complexe number
+number_second = -100  # integer too
+decimal = 0.5  # flaot
+complexe = 8j  # complexe number
 
-people = ["Mario","Luigi"] # list , can be change
-lotto_numbers = (1,2,3,4,5,6) # tuple , cannot be change
-numbers = range(1,1000) # generate number from 1 to 999
+people = ["Mario", "Luigi"]  # list , can be change
+lotto_numbers = (1, 2, 3, 4, 5, 6)  # tuple , cannot be change
+numbers = range(1, 1000)  # generate number from 1 to 999
 
-users = {'user1':'mario123', 'user2':'luigi2022'} #dictionnary key value
+users = {'user1': 'mario123', 'user2': 'luigi2022'}  # dictionnary key value
 
-unique_numbers = {1,2,2,3,3,4} # set list , if print we've got only 1,2,3,4 , but doesn't keep the order
-unique_number_frozen = frozenset({1,2,2,3,3,4}) # set list cannot change
+unique_numbers = {1, 2, 2, 3, 3, 4}  # set list , if print we've got only 1,2,3,4 , but doesn't keep the order
+unique_number_frozen = frozenset({1, 2, 2, 3, 3, 4})  # set list cannot change
 print(unique_number_frozen)
 print(unique_numbers)
 
-
-is_connected = False #boolean
-is_empty = None # no value
+is_connected = False  # boolean
+is_empty = None  # no value
 
 ### Adding type hints
 print("#Adding type hints")
-name = 'Mario' # python knows my var is a
-name_with_type_adding : str = 'Luigi' # safier and save lots of time
+name = 'Mario'  # python knows my var is a
+name_with_type_adding: str = 'Luigi'  # safier and save lots of time
 
 ##Type conversion
 print("#Type convertion")
@@ -53,76 +52,73 @@ number_conv = 10
 
 ## print(name+number) --> can't work error : can only concatenate str (not "int")
 ##solution
-print(name_conv+str(number_conv))
+print(name_conv + str(number_conv))
 
-#i can print type of var
+# i can print type of var
 print(type(name_conv))
 
-#sounds logic but not obvious
+# sounds logic but not obvious
 number_hundred = '100'
 classic_number = 10
 
 result_one = str(number) + number_hundred
 result_two = number + int(number_hundred)
 
-#integer
+# integer
 print("#Integer")
 a = 1
 b = 100
-c= 10000000000
+c = 10000000000
 d = -100
 e = 100_000_000
 f = 2
 
 print(a + d)
-print(e) # underscore gonna be ignore when printing
-
+print(e)  # underscore gonna be ignore when printing
 
 # basics operator
 print("#basics operators")
-print(1+2)
-print(1-2)
-print(2*2)
-print(2/4) # the result is a float
-print(10%3) # 3 goes 3 times in 10 and stay 1 ( 3*3 = 9 + 1 = 10) % give us the reminder
-print(10**3) # it's 10 power 3
-print(10//3) # strict division = 3
-print(10/3) #  give us 3.3333333
+print(1 + 2)
+print(1 - 2)
+print(2 * 2)
+print(2 / 4)  # the result is a float
+print(10 % 3)  # 3 goes 3 times in 10 and stay 1 ( 3*3 = 9 + 1 = 10) % give us the reminder
+print(10 ** 3)  # it's 10 power 3
+print(10 // 3)  # strict division = 3
+print(10 / 3)  # give us 3.3333333
 print(f)
-f +=3 # works with all operators
+f += 3  # works with all operators
 print(f)
-f **=4
+f **= 4
 print(f)
 
-print(10==10) # true
-print(10!=10) # false
-print(10 < 10) #
+print(10 == 10)  # true
+print(10 != 10)  # false
+print(10 < 10)  #
 print(10 > 10)
 print(10 >= 10)
-
 
 g = 2
 h = 5
 
-print(a<b or 4 > 6)
-print(not(a<b or 4 > 6)) # opposite of example above
+print(a < b or 4 > 6)
+print(not (a < b or 4 > 6))  # opposite of example above
 
+i = 100.0
+j = 1.0 * i
 
-i= 100.0
-j= 1.0 * i
+print(id(i))  # 4303499440
+print(id(j))  # 4303500752
+print(i is j)  # false cause not the same address in memory ( Cpython ) or id if you are in Pypy
+print(i == j)  # value is the same but not the adress
 
-print(id(i)) # 4303499440
-print(id(j)) # 4303500752
-print(i is j) # false cause not the same address in memory ( Cpython ) or id if you are in Pypy
-print(i == j) # value is the same but not the adress
+numeros = [1, 2, 3, 4, 5]
 
-numeros = [1,2,3,4,5]
+print(1 in numeros)  # true
+print(10 in numeros)  # false
+print(10 not in numeros)  # true
 
-print(1 in numeros) #true
-print(10 in numeros) #false
-print(10 not in numeros) #true
-
-#Strings
+# Strings
 print("#Strings")
 # using " is better when you want to use ' inside
 print("hello 'Luigi' !")
@@ -135,92 +131,163 @@ the end"""
 print(texte)
 print(textee)
 print(texte_multiligne)
-#F-String
+# F-String
 print("F-string")
 ## put var into a string
 var = "Text"
-print("1 "+var+" 2")
-new_string = f"1 {var} 2 , or {1+4}"
+print("1 " + var + " 2")
+new_string = f"1 {var} 2 , or {1 + 4}"
 print(new_string)
 
-#Boleans
+# Boleans
 print("Booleans")
 print(False == 0)
 print(True == 1)
-print(True+True) ## equal 2 ...
-print(True+False) ## equal 1
+print(True + True)  ## equal 2 ...
+print(True + False)  ## equal 1
 wtf = True + True
-print(wtf == True) ## true + false == true but true + true don't ...
+print(wtf == True)  ## true + false == true but true + true don't ...
 ## to work with logic use and/ or , cause bool inherite from int
 
 ##List
 # modifiable = oui / ordre conservé = oui / elements dupliqués = oui / def = liste d'élements
 print("List")
 
-peoples: list[str] = ['Mario','Luigi','Peach','Peach','Toad']
-print(peoples) # print ==> ['Mario', 'Luigi', 'Peach', 'Peach', 'Toad']
-print(len(peoples)) # print 5
-print(peoples[3]) # Peach
-print(peoples[-1]) #Toad
-print(peoples[0:2])# ['Mario', 'Luigi']
-print('Luigi' in peoples) #True
-print('luigi' in peoples) #false !! case sensitive
+peoples: list[str] = ['Mario', 'Luigi', 'Peach', 'Peach', 'Toad']
+print(peoples)  # print ==> ['Mario', 'Luigi', 'Peach', 'Peach', 'Toad']
+print(len(peoples))  # print 5
+print(peoples[3])  # Peach
+print(peoples[-1])  # Toad
+print(peoples[0:2])  # ['Mario', 'Luigi']
+print('Luigi' in peoples)  # True
+print('luigi' in peoples)  # false !! case sensitive
 peoples[0] = 'Bowser'
-print(peoples) #['Bowser', 'Luigi', 'Peach', 'Peach', 'Toad']
-peoples[2:4] = ['Sonic',"Knuckles"]
-print(peoples) #['Bowser', 'Luigi', 'Sonic', 'Knuckles', 'Toad']
-peoples.insert(2,"index2")
-print(peoples) #['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad']
+print(peoples)  # ['Bowser', 'Luigi', 'Peach', 'Peach', 'Toad']
+peoples[2:4] = ['Sonic', "Knuckles"]
+print(peoples)  # ['Bowser', 'Luigi', 'Sonic', 'Knuckles', 'Toad']
+peoples.insert(2, "index2")
+print(peoples)  # ['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad']
 peoples.append('Shadow')
-print(peoples)#['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad', 'Shadow']
+print(peoples)  # ['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad', 'Shadow']
 ## insert add in a specific position
 ## append insert at the end of the list
-peoples2: list[str]= ['Fox','Frog']
+peoples2: list[str] = ['Fox', 'Frog']
 peoples.extend(peoples2)
-print(peoples) # ['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad', 'Shadow', 'Fox', 'Frog']
+print(peoples)  # ['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad', 'Shadow', 'Fox', 'Frog']
 new_lists = peoples + peoples2
 print(new_lists)
-peoples+=peoples2
-print(peoples)## ['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad', 'Shadow', 'Fox', 'Frog', 'Fox', 'Frog']
+peoples += peoples2
+print(peoples)  ## ['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad', 'Shadow', 'Fox', 'Frog', 'Fox', 'Frog']
 peoples.remove('index2')
-print(peoples) # ['Bowser', 'Luigi', 'Sonic', 'Knuckles', 'Toad', 'Shadow', 'Fox', 'Frog', 'Fox', 'Frog']
+print(peoples)  # ['Bowser', 'Luigi', 'Sonic', 'Knuckles', 'Toad', 'Shadow', 'Fox', 'Frog', 'Fox', 'Frog']
 peoples.reverse()
-print(peoples) #['Frog', 'Fox', 'Frog', 'Fox', 'Shadow', 'Toad', 'Knuckles', 'Sonic', 'Luigi', 'Bowser']
+print(peoples)  # ['Frog', 'Fox', 'Frog', 'Fox', 'Shadow', 'Toad', 'Knuckles', 'Sonic', 'Luigi', 'Bowser']
 peoples.sort()
-print(peoples)#['Bowser', 'Fox', 'Fox', 'Frog', 'Frog', 'Knuckles', 'Luigi', 'Shadow', 'Sonic', 'Toad']
+print(peoples)  # ['Bowser', 'Fox', 'Fox', 'Frog', 'Frog', 'Knuckles', 'Luigi', 'Shadow', 'Sonic', 'Toad']
 peoples.clear()
-print(peoples)#[]
+print(peoples)  # []
 
-#Tuples
+# Tuples
 # modifiable = non / ordre conservé = oui / elements dupliqués = oui / def = liste immuable
 print('Tuples')
-people_tuples : tuple = ('Mario','Luigi','Toad','Bowser','Toad')# () is not mandatory , tuple is made by ,
+people_tuples: tuple = ('Mario', 'Luigi', 'Toad', 'Bowser', 'Toad')  # () is not mandatory , tuple is made by ,
 print(type(people_tuples))
 print(len(people_tuples))
 
-people_list : list[str] = list(people_tuples)
+people_list: list[str] = list(people_tuples)
 print(people_list)
 people_list.append('TOTO')
 print(people_list)
 people_l_to_tuple: tuple = tuple(people_list)
 print(people_l_to_tuple)
-print(people_tuples[0]) #Mario
-print(people_tuples[:2]) #print from begining tuple to index 2
-print(people_tuples[2:]) #print from index 2  to end of tuple
-print('Mario' in people_tuples) # true cause Mario is in tuple
-print(people_tuples.count('Mario'))#1
-print(people_tuples.index('Toad'))#2 but if we lokk a the tuple , we've got 2 Toad index 2 and index 4 , method index only return the first they found
-people_tuple_example: tuple = ('Mario','Peach','Toto','Bob')
-k,l,*m = people_tuple_example
-print(k)#Mario
-print(l)#Peach
-print(m)#['Toto', 'Bob'] , if we forgot the * , we've got an error
+print(people_tuples[0])  # Mario
+print(people_tuples[:2])  # print from begining tuple to index 2
+print(people_tuples[2:])  # print from index 2  to end of tuple
+print('Mario' in people_tuples)  # true cause Mario is in tuple
+print(people_tuples.count('Mario'))  # 1
+print(people_tuples.index(
+    'Toad'))  # 2 but if we lokk a the tuple , we've got 2 Toad index 2 and index 4 , method index only return the first they found
+people_tuple_example: tuple = ('Mario', 'Peach', 'Toto', 'Bob')
+k, l, *m = people_tuple_example
+print(k)  # Mario
+print(l)  # Peach
+print(m)  # ['Toto', 'Bob'] , if we forgot the * , we've got an error
 
-
-#Set
+# Set
 # modifiable = oui / ordre conservé = Non / elements dupliqués = Non / def = ensemble sans doublons
+items: set = {'apple', 'mango', 'strawberry', 'blueberry', 10, 10, True}  # you can put whatever you want but ...
+print(items)  # {'apple', True, 'mango', 10, 'blueberry', 'strawberry'} , unordered and no double value
+# you cannot search or modify by using index cause it is not ordered
+items.add('Bob')
+print(items)  # {True, 'Bob', 'blueberry', 'mango', 10, 'apple', 'strawberry'}
+items.update(['Marc', 'José'])
+print(items)  # {True, 'Bob', 10, 'blueberry', 'José', 'mango', 'strawberry', 'Marc', 'apple'}
+items.remove('Marc')
+print(
+    items)  # works cause Marc is in set , but i try with items.remove('Alice') ==> crash instead use discard , do the same if Alice doesn't exist do nothing
+items.discard('Alice')
 
+items2: set = {'tomato', 'cheese'}
+items3: set = {'apple', 'mango'}
+new_set_union = items.union(items2)
+print(new_set_union)
+new_set_union_dif = items | items2
+print(new_set_union_dif)  # same result as new_set_union
+# opti
+items |= items2
+print(items)
 
-#Dict
+# intersection return a new set instead of intersection_update who update the set
+items.intersection_update(items3)
+print(items)  # {'apple', 'mango'} , only keep duplicate value
+
+items.symmetric_difference_update(items2)
+print(items)  # {'apple', 'tomato', 'mango', 'cheese'}
+
+# Dict
 # modifiable = oui / ordre conservé = oui / elements dupliqués = clé unique / def = Paire: Clé /valeur
+# careful empty set vs empty dict
+empty_set = set()
+empty_dict = {}
+print(type(empty_set))
+print(type(empty_dict))
+
+users_dict = {'user1': 'Bob',
+              'user2': 'Alice'}
+
+print(users_dict)  # {'user1': 'Bob', 'user2': 'Alice'}
+print(len(users_dict))  # 2
+
+user1 = users_dict['user1']
+print(user1)  # Bob
+
+key_dict = users_dict.keys()
+print(key_dict)  # dict_keys(['user1', 'user2'])
+
+values_dict = users_dict.values()
+print(values_dict)  # dict_values(['Bob', 'Alice'])
+
+items_dict = users.items()
+print(items_dict)  # dict_items([('user1', 'mario123'), ('user2', 'luigi2022')])
+
+users_dict.update({'Marlone': 1234})
+print(users_dict)  # {'user1': 'Bob', 'user2': 'Alice', 'Marlone': 1234}
+users_dict.pop('Marlone')
+print(users_dict)  # {'user1': 'Bob', 'user2': 'Alice'}
+users_dict.popitem()
+print(users_dict)  # {'user1': 'Bob'}
+
+dict_in_dict = {'firstGuy': 1,
+                'secondGuy': 2,
+                'firstGroup': {
+                    'tommy': 7,
+                    'matt': 6
+                }}
+
+print(dict_in_dict)  # {'firstGuy': 1, 'secondGuy': 2, 'firstGroup': {'tommy': 7, 'matt': 6}}
+print(dict_in_dict['firstGroup'])  # {'tommy': 7, 'matt': 6}
+print(dict_in_dict['firstGroup']['tommy'])  # 7
+
+print(users_dict.setdefault('user1', 'There is no key !'))  # Bob
+print(users_dict.setdefault('OUT', 'There is no key !'))  # There is no key !
 
