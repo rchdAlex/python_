@@ -126,5 +126,101 @@ print(10 not in numeros) #true
 print("#Strings")
 # using " is better when you want to use ' inside
 print("hello 'Luigi' !")
-texte = "text "
+texte = 'text "toto" \n hi toto'
+textee = "text \"toto\" "
+texte_multiligne = """this is a story
+the middle
+the end"""
+
+print(texte)
+print(textee)
+print(texte_multiligne)
+#F-String
+print("F-string")
+## put var into a string
+var = "Text"
+print("1 "+var+" 2")
+new_string = f"1 {var} 2 , or {1+4}"
+print(new_string)
+
+#Boleans
+print("Booleans")
+print(False == 0)
+print(True == 1)
+print(True+True) ## equal 2 ...
+print(True+False) ## equal 1
+wtf = True + True
+print(wtf == True) ## true + false == true but true + true don't ...
+## to work with logic use and/ or , cause bool inherite from int
+
+##List
+# modifiable = oui / ordre conservé = oui / elements dupliqués = oui / def = liste d'élements
+print("List")
+
+peoples: list[str] = ['Mario','Luigi','Peach','Peach','Toad']
+print(peoples) # print ==> ['Mario', 'Luigi', 'Peach', 'Peach', 'Toad']
+print(len(peoples)) # print 5
+print(peoples[3]) # Peach
+print(peoples[-1]) #Toad
+print(peoples[0:2])# ['Mario', 'Luigi']
+print('Luigi' in peoples) #True
+print('luigi' in peoples) #false !! case sensitive
+peoples[0] = 'Bowser'
+print(peoples) #['Bowser', 'Luigi', 'Peach', 'Peach', 'Toad']
+peoples[2:4] = ['Sonic',"Knuckles"]
+print(peoples) #['Bowser', 'Luigi', 'Sonic', 'Knuckles', 'Toad']
+peoples.insert(2,"index2")
+print(peoples) #['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad']
+peoples.append('Shadow')
+print(peoples)#['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad', 'Shadow']
+## insert add in a specific position
+## append insert at the end of the list
+peoples2: list[str]= ['Fox','Frog']
+peoples.extend(peoples2)
+print(peoples) # ['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad', 'Shadow', 'Fox', 'Frog']
+new_lists = peoples + peoples2
+print(new_lists)
+peoples+=peoples2
+print(peoples)## ['Bowser', 'Luigi', 'index2', 'Sonic', 'Knuckles', 'Toad', 'Shadow', 'Fox', 'Frog', 'Fox', 'Frog']
+peoples.remove('index2')
+print(peoples) # ['Bowser', 'Luigi', 'Sonic', 'Knuckles', 'Toad', 'Shadow', 'Fox', 'Frog', 'Fox', 'Frog']
+peoples.reverse()
+print(peoples) #['Frog', 'Fox', 'Frog', 'Fox', 'Shadow', 'Toad', 'Knuckles', 'Sonic', 'Luigi', 'Bowser']
+peoples.sort()
+print(peoples)#['Bowser', 'Fox', 'Fox', 'Frog', 'Frog', 'Knuckles', 'Luigi', 'Shadow', 'Sonic', 'Toad']
+peoples.clear()
+print(peoples)#[]
+
+#Tuples
+# modifiable = non / ordre conservé = oui / elements dupliqués = oui / def = liste immuable
+print('Tuples')
+people_tuples : tuple = ('Mario','Luigi','Toad','Bowser','Toad')# () is not mandatory , tuple is made by ,
+print(type(people_tuples))
+print(len(people_tuples))
+
+people_list : list[str] = list(people_tuples)
+print(people_list)
+people_list.append('TOTO')
+print(people_list)
+people_l_to_tuple: tuple = tuple(people_list)
+print(people_l_to_tuple)
+print(people_tuples[0]) #Mario
+print(people_tuples[:2]) #print from begining tuple to index 2
+print(people_tuples[2:]) #print from index 2  to end of tuple
+print('Mario' in people_tuples) # true cause Mario is in tuple
+print(people_tuples.count('Mario'))#1
+print(people_tuples.index('Toad'))#2 but if we lokk a the tuple , we've got 2 Toad index 2 and index 4 , method index only return the first they found
+people_tuple_example: tuple = ('Mario','Peach','Toto','Bob')
+k,l,*m = people_tuple_example
+print(k)#Mario
+print(l)#Peach
+print(m)#['Toto', 'Bob'] , if we forgot the * , we've got an error
+
+
+#Set
+# modifiable = oui / ordre conservé = Non / elements dupliqués = Non / def = ensemble sans doublons
+
+
+#Dict
+# modifiable = oui / ordre conservé = oui / elements dupliqués = clé unique / def = Paire: Clé /valeur
 
