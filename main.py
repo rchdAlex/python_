@@ -1,0 +1,4 @@
+from sample_packages import  sample_modules_two, sample_modules_one
+
+sample_modules_one.hello_from_modules_one()
+sample_modules_two.hello_from_modules_two()
